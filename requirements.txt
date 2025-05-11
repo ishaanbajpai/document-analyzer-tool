@@ -31,8 +31,7 @@ beautifulsoup4==4.12.2
 html2text==2020.1.16
 
 # ---------------- OpenAI client ----------------
-openai==0.28.1
-
+openai
 # ---------------- Data processing ----------------
 tqdm==4.66.1
 numpy==1.24.3
