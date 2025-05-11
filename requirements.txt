@@ -8,9 +8,11 @@ pydantic==1.10.8
 streamlit==1.24.0
 
 # LangChain and related dependencies
-langchain==0.0.267
-langchain-openai==0.0.2
+# Install these packages in this specific order
 langchain-core==0.1.23
+langchain==0.0.267
+langchain-community==0.0.10
+langchain-openai==0.0.2
 
 # Vector database
 chromadb==0.4.18
