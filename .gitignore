@@ -1,0 +1,30 @@
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Vector database
+chroma_db/
+
+# Temporary files
+temp/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db

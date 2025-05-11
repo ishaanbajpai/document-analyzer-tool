@@ -1,0 +1,33 @@
+# FastAPI and related dependencies
+fastapi==0.95.2
+uvicorn>=0.34.0
+python-multipart>=0.0.9
+pydantic==1.10.8
+
+# LangChain and related dependencies
+langchain==0.0.267
+langchain-openai==0.0.2
+langchain-community>=0.3.0
+langchain-core==0.1.23
+langchain-text-splitters>=0.3.0
+
+# Vector database
+chromadb>=1.0.0
+
+# Document loaders
+unstructured>=0.12.0
+pypdf>=4.0.0
+python-docx>=1.0.0
+docx2txt>=0.8.0
+beautifulsoup4>=4.12.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# OpenAI
+openai>=1.55.0
+
+# SQLite is included in Python standard library
+
+# Other utilities
+tqdm>=4.0.0
