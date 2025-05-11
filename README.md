@@ -42,22 +42,33 @@ A powerful tool that allows you to upload documents, analyze them using AI, and 
    pip install -r requirements.txt
    ```
 
-   Option 2: If you encounter issues with LangChain dependencies, install them manually in this order:
+   Option 2: If you encounter issues with the requirements.txt file, install the dependencies manually in this exact order:
    ```bash
+   # Core dependencies
    pip install pydantic==1.10.8
+   pip install python-dotenv==1.0.0
+   pip install requests==2.31.0
+
+   # FastAPI and Streamlit
+   pip install fastapi==0.95.2 uvicorn==0.22.0 python-multipart==0.0.6
+   pip install streamlit==1.24.0
+
+   # LangChain - note the underscore vs hyphen difference!
    pip install langchain-core==0.1.23
    pip install langchain==0.0.267
-   pip install langchain-community==0.0.10
-   pip install langchain-openai==0.0.2
-   pip install openai==0.28.1
+   pip install langchain_community==0.0.10
+   pip install langchain_openai==0.0.2
+
+   # Vector database and document processing
    pip install chromadb==0.4.18
-   pip install fastapi==0.95.2
-   pip install uvicorn==0.22.0
-   pip install python-multipart==0.0.6
-   pip install streamlit==1.24.0
    pip install pypdf==3.15.1 python-docx==0.8.11 docx2txt==0.8
-   pip install python-dotenv==1.0.0 requests==2.31.0
+
+   # OpenAI and utilities
+   pip install openai==0.28.1
+   pip install tqdm==4.66.1 numpy==1.24.3 pandas==2.0.3
    ```
+
+   **Important Note**: Pay special attention to the package names. Some packages use hyphens (`langchain-core`) while others use underscores (`langchain_community`). This is a common source of installation issues.
 
 3. **Set up environment variables**
    - Create a `.env` file in the root directory based on `.env.sample`
@@ -119,10 +130,12 @@ A powerful tool that allows you to upload documents, analyze them using AI, and 
 
 ### Common Errors and Solutions
 - **"No module named 'langchain'"**: Try installing langchain manually with `pip install langchain==0.0.267`
-- **"No module named 'langchain_community'"**: Install with `pip install langchain-community==0.0.10`
+- **"No module named 'langchain_community'"**: Install with `pip install langchain_community==0.0.10` (note the underscore, not hyphen)
+- **"No module named 'langchain_openai'"**: Install with `pip install langchain_openai==0.0.2` (note the underscore, not hyphen)
 - **"No module named 'chromadb'"**: Install with `pip install chromadb==0.4.18`
 - **OpenAI API errors**: Make sure you're using `openai==0.28.1` which is compatible with the older LangChain version
 - **Import errors after installing dependencies**: Try restarting your Python environment or terminal
+- **Package naming confusion**: Some LangChain packages use hyphens in PyPI (when installing with pip) but underscores in Python imports
 
 ## Technical Architecture
 

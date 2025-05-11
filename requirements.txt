@@ -1,18 +1,21 @@
+# Core dependencies - install these first
+pydantic==1.10.8
+python-dotenv==1.0.0
+requests==2.31.0
+
 # FastAPI and related dependencies
 fastapi==0.95.2
 uvicorn==0.22.0
 python-multipart==0.0.6
-pydantic==1.10.8
 
 # Streamlit for the frontend
 streamlit==1.24.0
 
-# LangChain and related dependencies
-# Install these packages in this specific order
+# LangChain and related dependencies - install in this exact order
 langchain-core==0.1.23
 langchain==0.0.267
-langchain-community==0.0.10
-langchain-openai==0.0.2
+langchain_community==0.0.10  # Note the underscore instead of hyphen
+langchain_openai==0.0.2  # Note the underscore instead of hyphen
 
 # Vector database
 chromadb==0.4.18
@@ -24,16 +27,10 @@ docx2txt==0.8
 beautifulsoup4==4.12.2
 html2text==2020.1.16
 
-# Environment variables
-python-dotenv==1.0.0
-
 # OpenAI
 openai==0.28.1
 
-# HTTP requests
-requests==2.31.0
-
-# Other utilities
+# Data processing utilities
 tqdm==4.66.1
 numpy==1.24.3
 pandas==2.0.3
