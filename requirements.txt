@@ -1,38 +1,41 @@
-# Core dependencies - install these first
+# ---------------- Core dependencies ----------------
 pydantic==1.10.8
 python-dotenv==1.0.0
 requests==2.31.0
 
-# FastAPI and related dependencies
+# ---------------- FastAPI and related ----------------
 fastapi==0.95.2
 uvicorn==0.22.0
 python-multipart==0.0.6
 
-# Streamlit for the frontend
+# ---------------- Streamlit frontend ----------------
 streamlit==1.24.0
 
-# LangChain and related dependencies - install in this exact order
+# ---------------- LangChain ecosystem ----------------
 langchain-core==0.1.23
 langchain==0.0.267
-langchain_community==0.0.10  # Note the underscore instead of hyphen
-langchain_openai==0.0.2  # Note the underscore instead of hyphen
+langchain-community==0.0.10       # Use hyphen, not underscore
+langchain-openai==0.0.2           # Use hyphen, not underscore
 
-# Vector database
+# ---------------- Vector DB (Chroma) ----------------
 chromadb==0.4.18
+# If install fails: try manually with: pip install --no-cache-dir chromadb==0.4.18
 
-# Document processing
+# ---------------- Document processing ----------------
 pypdf==3.15.1
 python-docx==0.8.11
 docx2txt==0.8
 beautifulsoup4==4.12.2
 html2text==2020.1.16
 
-# OpenAI
+# ---------------- OpenAI client ----------------
 openai==0.28.1
 
-# Data processing utilities
+# ---------------- Data processing ----------------
 tqdm==4.66.1
 numpy==1.24.3
 pandas==2.0.3
 
-# SQLite is included in Python standard library
+# ---------------- Other helpful tools ----------------
+# If Python 3.12 is used, add this manually or switch to 3.11
+# pip install setuptools && apt install python3-distutils
