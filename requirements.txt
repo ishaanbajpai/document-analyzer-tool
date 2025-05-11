@@ -1,33 +1,39 @@
 # FastAPI and related dependencies
 fastapi==0.95.2
-uvicorn>=0.34.0
-python-multipart>=0.0.9
+uvicorn==0.22.0
+python-multipart==0.0.6
 pydantic==1.10.8
+
+# Streamlit for the frontend
+streamlit==1.24.0
 
 # LangChain and related dependencies
 langchain==0.0.267
 langchain-openai==0.0.2
-langchain-community>=0.3.0
 langchain-core==0.1.23
-langchain-text-splitters>=0.3.0
 
 # Vector database
-chromadb>=1.0.0
+chromadb==0.4.18
 
-# Document loaders
-unstructured>=0.12.0
-pypdf>=4.0.0
-python-docx>=1.0.0
-docx2txt>=0.8.0
-beautifulsoup4>=4.12.0
+# Document processing
+pypdf==3.15.1
+python-docx==0.8.11
+docx2txt==0.8
+beautifulsoup4==4.12.2
+html2text==2020.1.16
 
 # Environment variables
-python-dotenv>=1.0.0
+python-dotenv==1.0.0
 
 # OpenAI
-openai>=1.55.0
+openai==0.28.1
 
-# SQLite is included in Python standard library
+# HTTP requests
+requests==2.31.0
 
 # Other utilities
-tqdm>=4.0.0
+tqdm==4.66.1
+numpy==1.24.3
+pandas==2.0.3
+
+# SQLite is included in Python standard library
